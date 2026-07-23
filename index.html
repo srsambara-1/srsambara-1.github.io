@@ -324,19 +324,38 @@
       white-space: nowrap;
     }
 
+    .publication-scroll {
+      max-height: 22rem;
+      overflow-y: auto;
+      padding-right: 0.85rem;
+      border-top: 1px solid var(--soft);
+      border-bottom: 1px solid var(--soft);
+      scrollbar-color: rgba(35, 105, 90, 0.45) transparent;
+      scrollbar-width: thin;
+    }
+
+    .publication-scroll:focus-visible {
+      border-radius: 4px;
+      outline: 3px solid rgba(35, 105, 90, 0.2);
+      outline-offset: 4px;
+    }
+
     .publication-list {
-      display: grid;
-      gap: 0.9rem;
       margin: 0;
       padding: 0;
       list-style: none;
     }
 
+    .publication-list li {
+      border-bottom: 1px solid rgba(35, 105, 90, 0.12);
+    }
+
+    .publication-list li:last-child {
+      border-bottom: 0;
+    }
+
     .publication {
-      padding: 1.15rem 1.2rem;
-      border: 1px solid var(--soft);
-      border-radius: var(--radius);
-      background: rgba(255, 255, 255, 0.82);
+      padding: 1.05rem 0;
     }
 
     .publication h3 {
@@ -374,16 +393,11 @@
       font-size: 0.9rem;
     }
 
-    .paper-summary,
     .coffee-intro,
     .coffee-list dd {
       color: var(--muted);
       font-size: 0.92rem;
       line-height: 1.55;
-    }
-
-    .paper-summary {
-      margin: 0.55rem 0 0;
     }
 
     .coffee-intro {
@@ -497,8 +511,13 @@
         gap: 1rem;
       }
 
+      .publication-scroll {
+        max-height: 24rem;
+        padding-right: 0.45rem;
+      }
+
       .publication {
-        padding: 1rem;
+        padding: 1rem 0;
       }
     }
   </style>
@@ -559,9 +578,10 @@
           at Duke NLP.
         </p>
         <p>
-          Beyond my academic work, I have deployed production agentic systems to Fortune 50 companies at
-          Distyl AI, helped develop the first commercially available multi-finding abdomen-pelvis CT triage AI
-          in the US at a2z Radiology AI, and contributed to
+          Beyond my academic work, I have deployed production AI systems to F50 companies at
+          <span class="text-highlight">Distyl AI</span>, helped develop the first commercially available
+          multi-finding abdomen-pelvis CT triage AI in the US at
+          <span class="text-highlight">a2z Radiology AI</span>, and contributed to
           multimodal AI research with Eric Schmidt at
           <span class="text-highlight">Schmidt Sciences</span>.
         </p>
@@ -577,6 +597,7 @@
           <span class="section-kicker">Publications and preprints</span>
         </div>
 
+        <div class="publication-scroll" role="region" aria-label="Selected research publications" tabindex="0">
         <ol class="publication-list">
           <li>
             <article class="publication">
@@ -614,14 +635,14 @@
             <article class="publication">
               <h3>
                 <a href="https://arxiv.org/pdf/2510.20967" target="_blank" rel="noopener noreferrer">
-                  Grounded Reasoning in 3D Vision&ndash;Language Models
+                  Improving Multimodal Reasoning in 3D Vision&ndash;Language Models
                 </a>
               </h3>
               <p class="meta">
                 <strong>Sraavya Sambara*</strong>, Sung Eun Kim*, Xiaoman Zhang, Luyang Luo,
                 Shreya Johri, Mohammed Baharoon, Du Hyun Ro, Pranav Rajpurkar.
               </p>
-              <p class="venue">Pacific Symposium on Biocomputing, 2026. Oral presentation.</p>
+              <p class="venue">Pacific Symposium on Biocomputing, 2026. Oral presentation. Invited Talk at Microsoft Research.</p>
               <p class="note">* Equal contribution.</p>
             </article>
           </li>
@@ -638,13 +659,10 @@
                 Rushil Arora, Boyang Tom Jin, Pranav Rajpurkar, David A. Kim.
               </p>
               <p class="venue">Pacific Symposium on Biocomputing, 2026. Oral presentation.</p>
-              <p class="paper-summary">
-                Studies the use of large language models for predicting emergency department revisits and
-                demonstrates performance gains using retrieval-augmented and embedding-based approaches.
-              </p>
             </article>
           </li>
         </ol>
+        </div>
       </section>
 
       <section id="coffee" class="section" aria-labelledby="coffee-heading">
