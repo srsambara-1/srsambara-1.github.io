@@ -327,9 +327,11 @@
     .publication-scroll {
       max-height: 22rem;
       overflow-y: auto;
-      padding-right: 0.85rem;
-      border-top: 1px solid var(--soft);
-      border-bottom: 1px solid var(--soft);
+      padding: 0 1rem;
+      border: 1px solid var(--soft);
+      border-radius: var(--radius);
+      background: rgba(255, 255, 255, 0.72);
+      box-shadow: 0 12px 32px rgba(24, 42, 35, 0.05);
       scrollbar-color: rgba(35, 105, 90, 0.45) transparent;
       scrollbar-width: thin;
     }
@@ -391,39 +393,6 @@
     .note {
       color: var(--muted);
       font-size: 0.9rem;
-    }
-
-    .coffee-intro,
-    .coffee-list dd {
-      color: var(--muted);
-      font-size: 0.92rem;
-      line-height: 1.55;
-    }
-
-    .coffee-intro {
-      max-width: 42rem;
-      margin-bottom: 0.9rem;
-    }
-
-    .coffee-list {
-      margin: 0;
-    }
-
-    .coffee-list div {
-      display: grid;
-      grid-template-columns: 8.5rem minmax(0, 1fr);
-      gap: 1rem;
-      padding: 0.55rem 0;
-      border-top: 1px solid rgba(35, 105, 90, 0.12);
-    }
-
-    .coffee-list dt {
-      color: var(--text);
-      font-weight: 700;
-    }
-
-    .coffee-list dd {
-      margin: 0;
     }
 
     .contact-panel {
@@ -491,10 +460,6 @@
         margin-top: 0.75rem;
       }
 
-      .coffee-list div {
-        grid-template-columns: 1fr;
-        gap: 0.1rem;
-      }
     }
 
     @media (max-width: 520px) {
@@ -513,7 +478,7 @@
 
       .publication-scroll {
         max-height: 24rem;
-        padding-right: 0.45rem;
+        padding: 0 0.85rem;
       }
 
       .publication {
@@ -530,7 +495,7 @@
     <nav class="site-nav" aria-label="Primary navigation">
       <a href="#about">About</a>
       <a href="#research">Research</a>
-      <a href="#coffee">Coffee</a>
+      <a href="coffee.html">Coffee</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
@@ -598,119 +563,71 @@
         </div>
 
         <div class="publication-scroll" role="region" aria-label="Selected research publications" tabindex="0">
-        <ol class="publication-list">
-          <li>
-            <article class="publication">
-              <h3>
-                <a href="https://arxiv.org/pdf/2601.09853" target="_blank" rel="noopener noreferrer">
-                  LMs Accept False Premises in Real-World Communication
-                </a>
-              </h3>
-              <p class="meta">
-                <strong>Sraavya Sambara*</strong>, Yuan Pu*, Ayman Ali, Vishala Mishra,
-                Lionel Wong, Monica Agrawal.
-              </p>
-              <p class="venue">ACL 2026.</p>
-              <p class="note">* Equal contribution.</p>
-            </article>
-          </li>
+          <ol class="publication-list">
+            <li>
+              <article class="publication">
+                <h3>
+                  <a href="https://arxiv.org/pdf/2601.09853" target="_blank" rel="noopener noreferrer">
+                    LMs Accept False Premises in Real-World Communication
+                  </a>
+                </h3>
+                <p class="meta">
+                  <strong>Sraavya Sambara*</strong>, Yuan Pu*, Ayman Ali, Vishala Mishra,
+                  Lionel Wong, Monica Agrawal.
+                </p>
+                <p class="venue">ACL 2026.</p>
+                <p class="note">* Equal contribution.</p>
+              </article>
+            </li>
 
-          <li>
-            <article class="publication">
-              <h3>
-                <a href="https://arxiv.org/pdf/2411.00299" target="_blank" rel="noopener noreferrer">
-                  Mitigating Hallucinations in Vision&ndash;Language Models via Conformal Prediction
-                </a>
-              </h3>
-              <p class="meta">
-                Serena Zhang* and <strong>Sraavya Sambara*</strong>, Oishi Banerjee,
-                Julian N. Acosta, L. John Fahrner, Pranav Rajpurkar.
-              </p>
-              <p class="venue">ML4H @ NeurIPS 2024.</p>
-              <p class="note">* Equal contribution.</p>
-            </article>
-          </li>
+            <li>
+              <article class="publication">
+                <h3>
+                  <a href="https://arxiv.org/pdf/2411.00299" target="_blank" rel="noopener noreferrer">
+                    Mitigating Hallucinations in Vision&ndash;Language Models via Conformal Prediction
+                  </a>
+                </h3>
+                <p class="meta">
+                  Serena Zhang* and <strong>Sraavya Sambara*</strong>, Oishi Banerjee,
+                  Julian N. Acosta, L. John Fahrner, Pranav Rajpurkar.
+                </p>
+                <p class="venue">ML4H @ NeurIPS 2024.</p>
+                <p class="note">* Equal contribution.</p>
+              </article>
+            </li>
 
-          <li>
-            <article class="publication">
-              <h3>
-                <a href="https://arxiv.org/pdf/2510.20967" target="_blank" rel="noopener noreferrer">
-                  Improving Multimodal Reasoning in 3D Vision&ndash;Language Models
-                </a>
-              </h3>
-              <p class="meta">
-                <strong>Sraavya Sambara*</strong>, Sung Eun Kim*, Xiaoman Zhang, Luyang Luo,
-                Shreya Johri, Mohammed Baharoon, Du Hyun Ro, Pranav Rajpurkar.
-              </p>
-              <p class="venue">Pacific Symposium on Biocomputing, 2026. Oral presentation. Invited Talk at Microsoft Research.</p>
-              <p class="note">* Equal contribution.</p>
-            </article>
-          </li>
+            <li>
+              <article class="publication">
+                <h3>
+                  <a href="https://arxiv.org/pdf/2510.20967" target="_blank" rel="noopener noreferrer">
+                    Improving Multimodal Reasoning in 3D Vision&ndash;Language Models
+                  </a>
+                </h3>
+                <p class="meta">
+                  <strong>Sraavya Sambara*</strong>, Sung Eun Kim*, Xiaoman Zhang, Luyang Luo,
+                  Shreya Johri, Mohammed Baharoon, Du Hyun Ro, Pranav Rajpurkar.
+                </p>
+                <p class="venue">Pacific Symposium on Biocomputing, 2026. Oral presentation. Invited Talk at Microsoft Research.</p>
+                <p class="note">* Equal contribution.</p>
+              </article>
+            </li>
 
-          <li>
-            <article class="publication">
-              <h3>
-                <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12952678/" target="_blank" rel="noopener noreferrer">
-                  Reasoning Does Not Always Help: Benchmarking LLMs for Emergency Department Revisit Prediction
-                </a>
-              </h3>
-              <p class="meta">
-                Emma Chen, Luyang Luo, Fatma Gunturkun, <strong>Sraavya Sambara</strong>,
-                Rushil Arora, Boyang Tom Jin, Pranav Rajpurkar, David A. Kim.
-              </p>
-              <p class="venue">Pacific Symposium on Biocomputing, 2026. Oral presentation.</p>
-            </article>
-          </li>
-        </ol>
+            <li>
+              <article class="publication">
+                <h3>
+                  <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12952678/" target="_blank" rel="noopener noreferrer">
+                    Reasoning Does Not Always Help: Benchmarking LLMs for Emergency Department Revisit Prediction
+                  </a>
+                </h3>
+                <p class="meta">
+                  Emma Chen, Luyang Luo, Fatma Gunturkun, <strong>Sraavya Sambara</strong>,
+                  Rushil Arora, Boyang Tom Jin, Pranav Rajpurkar, David A. Kim.
+                </p>
+                <p class="venue">Pacific Symposium on Biocomputing, 2026. Oral presentation.</p>
+              </article>
+            </li>
+          </ol>
         </div>
-      </section>
-
-      <section id="coffee" class="section" aria-labelledby="coffee-heading">
-        <div class="section-header">
-          <h2 id="coffee-heading">Coffee Recommendations</h2>
-          <span class="section-kicker">Favorite shops by city</span>
-        </div>
-
-        <p class="coffee-intro">
-          I'm an avid <s>coffee addict</s> coffee drinker! Here are my favorite coffee shops by city:
-        </p>
-        <dl class="coffee-list">
-          <div>
-            <dt>Boston</dt>
-            <dd>George Howell Coffee (best coffee in the country imo), Ogawa Coffee</dd>
-          </div>
-          <div>
-            <dt>Cambridge</dt>
-            <dd>
-              Circus Cooperative Cafe, Simon's (personal fave because they scale size of the coffee with
-              espresso shots), Broadsheet
-            </dd>
-          </div>
-          <div>
-            <dt>New York</dt>
-            <dd>Caf&eacute; Integral, Felix Roasting Co.</dd>
-          </div>
-          <div>
-            <dt>San Francisco</dt>
-            <dd>Shoji, Equator, Cafe Reveille</dd>
-          </div>
-          <div>
-            <dt>Pleasanton</dt>
-            <dd>Inklings</dd>
-          </div>
-          <div>
-            <dt>Madrid</dt>
-            <dd>Cafe de la Luz</dd>
-          </div>
-          <div>
-            <dt>Barcelona</dt>
-            <dd>Blackbird coffee corner</dd>
-          </div>
-          <div>
-            <dt>Tours, France</dt>
-            <dd>El Cafecito</dd>
-          </div>
-        </dl>
       </section>
 
       <section id="contact" class="section" aria-labelledby="contact-heading">
