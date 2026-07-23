@@ -354,36 +354,12 @@
     }
 
     .publication-scroll {
-      max-height: 22rem;
+      max-height: 27rem;
       overflow-y: scroll;
-      padding: 0 1.65rem 0 1rem;
+      padding: 0 1.35rem 0 1rem;
       scrollbar-color: rgba(35, 105, 90, 0.45) transparent;
       scrollbar-gutter: stable;
       scrollbar-width: thin;
-    }
-
-    .scroll-cue {
-      position: absolute;
-      top: 0.9rem;
-      right: 0.65rem;
-      bottom: 0.9rem;
-      z-index: 2;
-      width: 6px;
-      border-radius: 999px;
-      background: rgba(35, 105, 90, 0.18);
-      pointer-events: none;
-    }
-
-    .scroll-cue::after {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 4.5rem;
-      border-radius: 999px;
-      background: rgba(35, 105, 90, 0.72);
-      box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.8);
-      content: "";
     }
 
     .publication-scroll::-webkit-scrollbar {
@@ -563,7 +539,6 @@
       }
 
       .publication-scroll {
-        max-height: 24rem;
         padding: 0 1.45rem 0 0.85rem;
       }
 
@@ -722,7 +697,6 @@
               </li>
             </ol>
           </div>
-          <span class="scroll-cue" aria-hidden="true"></span>
         </div>
       </section>
 
