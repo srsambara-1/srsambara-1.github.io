@@ -6,7 +6,7 @@
   <title>Sraavya Sambara</title>
   <meta
     name="description"
-    content="Sraavya Sambara is a PhD student at MIT CSAIL and LIDS, working on efficient and reliable multimodal machine learning."
+    content="Sraavya Sambara is an incoming PhD student at MIT CSAIL and LIDS, working on efficient and reliable multimodal machine learning systems."
   />
   <meta name="author" content="Sraavya Sambara" />
   <link rel="canonical" href="https://srsambara-1.github.io/" />
@@ -14,7 +14,7 @@
   <meta property="og:title" content="Sraavya Sambara" />
   <meta
     property="og:description"
-    content="MIT CSAIL and LIDS PhD student working on efficient and reliable multimodal machine learning."
+    content="Incoming MIT CSAIL and LIDS PhD student working on efficient and reliable multimodal machine learning systems."
   />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://srsambara-1.github.io/" />
@@ -23,7 +23,7 @@
   <meta name="twitter:title" content="Sraavya Sambara" />
   <meta
     name="twitter:description"
-    content="MIT CSAIL and LIDS PhD student working on efficient and reliable multimodal machine learning."
+    content="Incoming MIT CSAIL and LIDS PhD student working on efficient and reliable multimodal machine learning systems."
   />
   <meta name="twitter:image" content="https://srsambara-1.github.io/profile.jpg" />
 
@@ -374,6 +374,44 @@
       font-size: 0.9rem;
     }
 
+    .paper-summary,
+    .coffee-intro,
+    .coffee-list dd {
+      color: var(--muted);
+      font-size: 0.92rem;
+      line-height: 1.55;
+    }
+
+    .paper-summary {
+      margin: 0.55rem 0 0;
+    }
+
+    .coffee-intro {
+      max-width: 42rem;
+      margin-bottom: 0.9rem;
+    }
+
+    .coffee-list {
+      margin: 0;
+    }
+
+    .coffee-list div {
+      display: grid;
+      grid-template-columns: 8.5rem minmax(0, 1fr);
+      gap: 1rem;
+      padding: 0.55rem 0;
+      border-top: 1px solid rgba(35, 105, 90, 0.12);
+    }
+
+    .coffee-list dt {
+      color: var(--text);
+      font-weight: 700;
+    }
+
+    .coffee-list dd {
+      margin: 0;
+    }
+
     .contact-panel {
       display: grid;
       grid-template-columns: minmax(0, 1fr) auto;
@@ -438,6 +476,11 @@
       .contact-panel .link-list {
         margin-top: 0.75rem;
       }
+
+      .coffee-list div {
+        grid-template-columns: 1fr;
+        gap: 0.1rem;
+      }
     }
 
     @media (max-width: 520px) {
@@ -468,6 +511,7 @@
     <nav class="site-nav" aria-label="Primary navigation">
       <a href="#about">About</a>
       <a href="#research">Research</a>
+      <a href="#coffee">Coffee</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
@@ -494,14 +538,14 @@
         <p class="eyebrow">About</p>
         <h2 id="about-heading" class="visually-hidden">About Sraavya Sambara</h2>
         <p>
-          Hi! I'm a PhD student at
-          <span class="text-highlight">MIT CSAIL</span>
-          and
+          Hi! I'm an incoming PhD student at
+          <span class="text-highlight">MIT CSAIL</span> and
           <span class="text-highlight">LIDS</span>, and I'm fortunate to be supported by the
           <span class="text-highlight">NSF Graduate Research Fellowship</span>.
           My research centers on building efficient and reliable multimodal machine learning systems. I have
           previously worked on making vision-language and language models safer with conformal prediction,
-          evaluating their multimodal reasoning capabilities, and investigating alignment failures in LMs.
+          evaluating their multimodal reasoning capabilities, and investigating LM alignment failures in real
+          user interactions.
         </p>
         <p>
           Previously, I studied Computer Science at
@@ -524,10 +568,8 @@
           <span class="text-highlight">Schmidt Sciences</span>.
         </p>
         <p>
-          Outside research, I enjoy tennis, running, and Carnatic music.
-        </p>
-        <p>
-          <em>You can reach me at <span class="text-highlight">sraavyas@mit.edu</span>. I'd love to hear from you!</em>
+          Outside research, I enjoy tennis, running, and Carnatic music. Please reach out at
+          <span class="text-highlight">sraavyas@mit.edu</span> if you'd like to chat &mdash; I'd love to hear from you!
         </p>
       </section>
 
@@ -546,10 +588,11 @@
                 </a>
               </h3>
               <p class="meta">
-                <strong>Sraavya Sambara</strong>, Yuan Pu, Ayman Ali, Vishala Mishra,
+                <strong>Sraavya Sambara*</strong>, Yuan Pu*, Ayman Ali, Vishala Mishra,
                 Lionel Wong, Monica Agrawal.
               </p>
               <p class="venue">ACL 2026.</p>
+              <p class="note">* Equal contribution.</p>
             </article>
           </li>
 
@@ -577,13 +620,81 @@
                 </a>
               </h3>
               <p class="meta">
-                <strong>Sraavya Sambara</strong>, Sung Eun Kim, Xiaoman Zhang, Luyang Luo,
+                <strong>Sraavya Sambara*</strong>, Sung Eun Kim*, Xiaoman Zhang, Luyang Luo,
                 Shreya Johri, Mohammed Baharoon, Du Hyun Ro, Pranav Rajpurkar.
               </p>
               <p class="venue">Pacific Symposium on Biocomputing, 2026. Oral presentation.</p>
+              <p class="note">* Equal contribution.</p>
+            </article>
+          </li>
+
+          <li>
+            <article class="publication">
+              <h3>
+                <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12952678/" target="_blank" rel="noopener noreferrer">
+                  Reasoning Does Not Always Help: Benchmarking LLMs for Emergency Department Revisit Prediction
+                </a>
+              </h3>
+              <p class="meta">
+                Emma Chen, Luyang Luo, Fatma Gunturkun, <strong>Sraavya Sambara</strong>,
+                Rushil Arora, Boyang Tom Jin, Pranav Rajpurkar, David A. Kim.
+              </p>
+              <p class="venue">Pacific Symposium on Biocomputing, 2026. Oral presentation.</p>
+              <p class="paper-summary">
+                Studies the use of large language models for predicting emergency department revisits and
+                demonstrates performance gains using retrieval-augmented and embedding-based approaches.
+              </p>
             </article>
           </li>
         </ol>
+      </section>
+
+      <section id="coffee" class="section" aria-labelledby="coffee-heading">
+        <div class="section-header">
+          <h2 id="coffee-heading">Coffee Recommendations</h2>
+          <span class="section-kicker">Favorite shops by city</span>
+        </div>
+
+        <p class="coffee-intro">
+          I'm an avid <s>coffee addict</s> coffee drinker! Here are my favorite coffee shops by city:
+        </p>
+        <dl class="coffee-list">
+          <div>
+            <dt>Boston</dt>
+            <dd>George Howell Coffee (best coffee in the country imo), Ogawa Coffee</dd>
+          </div>
+          <div>
+            <dt>Cambridge</dt>
+            <dd>
+              Circus Cooperative Cafe, Simon's (personal fave because they scale size of the coffee with
+              espresso shots), Broadsheet
+            </dd>
+          </div>
+          <div>
+            <dt>New York</dt>
+            <dd>Caf&eacute; Integral, Felix Roasting Co.</dd>
+          </div>
+          <div>
+            <dt>San Francisco</dt>
+            <dd>Shoji, Equator, Cafe Reveille</dd>
+          </div>
+          <div>
+            <dt>Pleasanton</dt>
+            <dd>Inklings</dd>
+          </div>
+          <div>
+            <dt>Madrid</dt>
+            <dd>Cafe de la Luz</dd>
+          </div>
+          <div>
+            <dt>Barcelona</dt>
+            <dd>Blackbird coffee corner</dd>
+          </div>
+          <div>
+            <dt>Tours, France</dt>
+            <dd>El Cafecito</dd>
+          </div>
+        </dl>
       </section>
 
       <section id="contact" class="section" aria-labelledby="contact-heading">
@@ -598,7 +709,6 @@
           <ul class="link-list" aria-label="Contact links">
             <li><a href="mailto:sraavyas@mit.edu">Email</a></li>
             <li><a href="https://github.com/srsambara-1" target="_blank" rel="noopener noreferrer me">GitHub</a></li>
-            <li><a href="https://aclanthology.org/people/sraavya-sambara/" target="_blank" rel="noopener noreferrer">ACL Anthology</a></li>
           </ul>
         </div>
       </section>
