@@ -345,17 +345,45 @@
       white-space: nowrap;
     }
 
-    .publication-scroll {
-      max-height: 22rem;
-      overflow-y: scroll;
-      padding: 0 1rem;
+    .publication-frame {
+      position: relative;
       border: 1px solid var(--soft);
       border-radius: var(--radius);
       background: rgba(255, 255, 255, 0.72);
       box-shadow: 0 12px 32px rgba(24, 42, 35, 0.05);
+    }
+
+    .publication-scroll {
+      max-height: 22rem;
+      overflow-y: scroll;
+      padding: 0 1.65rem 0 1rem;
       scrollbar-color: rgba(35, 105, 90, 0.45) transparent;
       scrollbar-gutter: stable;
       scrollbar-width: thin;
+    }
+
+    .scroll-cue {
+      position: absolute;
+      top: 0.9rem;
+      right: 0.65rem;
+      bottom: 0.9rem;
+      z-index: 2;
+      width: 6px;
+      border-radius: 999px;
+      background: rgba(35, 105, 90, 0.18);
+      pointer-events: none;
+    }
+
+    .scroll-cue::after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4.5rem;
+      border-radius: 999px;
+      background: rgba(35, 105, 90, 0.72);
+      box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.8);
+      content: "";
     }
 
     .publication-scroll::-webkit-scrollbar {
@@ -381,6 +409,10 @@
       border-radius: 4px;
       outline: 3px solid rgba(35, 105, 90, 0.2);
       outline-offset: 4px;
+    }
+
+    .publication-frame:focus-within {
+      border-color: rgba(35, 105, 90, 0.35);
     }
 
     .publication-list {
@@ -532,7 +564,7 @@
 
       .publication-scroll {
         max-height: 24rem;
-        padding: 0 0.85rem;
+        padding: 0 1.45rem 0 0.85rem;
       }
 
       .publication {
@@ -623,71 +655,74 @@
           <span class="section-kicker">Publications and preprints</span>
         </div>
 
-        <div class="publication-scroll" role="region" aria-label="Selected research publications" tabindex="0">
-          <ol class="publication-list">
-            <li>
-              <article class="publication">
-                <h3>
-                  <a href="https://arxiv.org/pdf/2601.09853" target="_blank" rel="noopener noreferrer">
-                    LMs Accept False Premises in Real-World Communication
-                  </a>
-                </h3>
-                <p class="meta">
-                  <strong>Sraavya Sambara*</strong>, Yuan Pu*, Ayman Ali, Vishala Mishra,
-                  Lionel Wong, Monica Agrawal.
-                </p>
-                <p class="venue">ACL 2026.</p>
-                <p class="note">* Equal contribution.</p>
-              </article>
-            </li>
+        <div class="publication-frame">
+          <div class="publication-scroll" role="region" aria-label="Selected research publications" tabindex="0">
+            <ol class="publication-list">
+              <li>
+                <article class="publication">
+                  <h3>
+                    <a href="https://arxiv.org/pdf/2601.09853" target="_blank" rel="noopener noreferrer">
+                      LMs Accept False Premises in Real-World Communication
+                    </a>
+                  </h3>
+                  <p class="meta">
+                    <strong>Sraavya Sambara*</strong>, Yuan Pu*, Ayman Ali, Vishala Mishra,
+                    Lionel Wong, Monica Agrawal.
+                  </p>
+                  <p class="venue">ACL 2026.</p>
+                  <p class="note">* Equal contribution.</p>
+                </article>
+              </li>
 
-            <li>
-              <article class="publication">
-                <h3>
-                  <a href="https://arxiv.org/pdf/2411.00299" target="_blank" rel="noopener noreferrer">
-                    Mitigating Hallucinations in Vision&ndash;Language Models via Conformal Prediction
-                  </a>
-                </h3>
-                <p class="meta">
-                  Serena Zhang* and <strong>Sraavya Sambara*</strong>, Oishi Banerjee,
-                  Julian N. Acosta, L. John Fahrner, Pranav Rajpurkar.
-                </p>
-                <p class="venue">ML4H @ NeurIPS 2024.</p>
-                <p class="note">* Equal contribution.</p>
-              </article>
-            </li>
+              <li>
+                <article class="publication">
+                  <h3>
+                    <a href="https://arxiv.org/pdf/2411.00299" target="_blank" rel="noopener noreferrer">
+                      Mitigating Hallucinations in Vision&ndash;Language Models via Conformal Prediction
+                    </a>
+                  </h3>
+                  <p class="meta">
+                    Serena Zhang* and <strong>Sraavya Sambara*</strong>, Oishi Banerjee,
+                    Julian N. Acosta, L. John Fahrner, Pranav Rajpurkar.
+                  </p>
+                  <p class="venue">ML4H @ NeurIPS 2024.</p>
+                  <p class="note">* Equal contribution.</p>
+                </article>
+              </li>
 
-            <li>
-              <article class="publication">
-                <h3>
-                  <a href="https://arxiv.org/pdf/2510.20967" target="_blank" rel="noopener noreferrer">
-                    Improving Multimodal Reasoning in 3D Vision&ndash;Language Models
-                  </a>
-                </h3>
-                <p class="meta">
-                  <strong>Sraavya Sambara*</strong>, Sung Eun Kim*, Xiaoman Zhang, Luyang Luo,
-                  Shreya Johri, Mohammed Baharoon, Du Hyun Ro, Pranav Rajpurkar.
-                </p>
-                <p class="venue">Pacific Symposium on Biocomputing, 2026. Oral presentation. Invited Talk at Microsoft Research.</p>
-                <p class="note">* Equal contribution.</p>
-              </article>
-            </li>
+              <li>
+                <article class="publication">
+                  <h3>
+                    <a href="https://arxiv.org/pdf/2510.20967" target="_blank" rel="noopener noreferrer">
+                      Improving Multimodal Reasoning in 3D Vision&ndash;Language Models
+                    </a>
+                  </h3>
+                  <p class="meta">
+                    <strong>Sraavya Sambara*</strong>, Sung Eun Kim*, Xiaoman Zhang, Luyang Luo,
+                    Shreya Johri, Mohammed Baharoon, Du Hyun Ro, Pranav Rajpurkar.
+                  </p>
+                  <p class="venue">Pacific Symposium on Biocomputing, 2026. Oral presentation. Invited Talk at Microsoft Research.</p>
+                  <p class="note">* Equal contribution.</p>
+                </article>
+              </li>
 
-            <li>
-              <article class="publication">
-                <h3>
-                  <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12952678/" target="_blank" rel="noopener noreferrer">
-                    Reasoning Does Not Always Help: Benchmarking LLMs for Emergency Department Revisit Prediction
-                  </a>
-                </h3>
-                <p class="meta">
-                  Emma Chen, Luyang Luo, Fatma Gunturkun, <strong>Sraavya Sambara</strong>,
-                  Rushil Arora, Boyang Tom Jin, Pranav Rajpurkar, David A. Kim.
-                </p>
-                <p class="venue">Pacific Symposium on Biocomputing, 2026. Oral presentation.</p>
-              </article>
-            </li>
-          </ol>
+              <li>
+                <article class="publication">
+                  <h3>
+                    <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12952678/" target="_blank" rel="noopener noreferrer">
+                      Reasoning Models Don't Necessarily Help: Benchmarking LLMs for Emergency Department Revisit Prediction
+                    </a>
+                  </h3>
+                  <p class="meta">
+                    Emma Chen, Luyang Luo, Fatma Gunturkun, <strong>Sraavya Sambara</strong>,
+                    Rushil Arora, Boyang Tom Jin, Pranav Rajpurkar, David A. Kim.
+                  </p>
+                  <p class="venue">Pacific Symposium on Biocomputing, 2026. Oral presentation.</p>
+                </article>
+              </li>
+            </ol>
+          </div>
+          <span class="scroll-cue" aria-hidden="true"></span>
         </div>
       </section>
 
